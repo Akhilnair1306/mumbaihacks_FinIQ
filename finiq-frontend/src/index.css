@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 30% 97%;
+    --foreground: 220 15% 30%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 30%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 30%;
+
+    /* Pastel FINIQ Green - primary action color */
+    --primary: 152 45% 70%;
+    --primary-foreground: 220 15% 25%;
+
+    /* Pastel Sky Blue - secondary color */
+    --secondary: 207 60% 80%;
+    --secondary-foreground: 220 15% 25%;
+
+    /* Soft muted backgrounds */
+    --muted: 210 25% 93%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Pastel Orange accent for alerts/highlights */
+    --accent: 25 75% 75%;
+    --accent-foreground: 220 15% 25%;
+
+    /* Pastel Success green */
+    --success: 152 50% 75%;
+    --success-foreground: 220 15% 25%;
+
+    /* Pastel Danger/expense red */
+    --destructive: 0 60% 75%;
+    --destructive-foreground: 220 15% 25%;
+
+    /* Pastel Warning orange */
+    --warning: 25 70% 78%;
+    --warning-foreground: 220 15% 25%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 94%;
+    --ring: 152 45% 70%;
+
+    --radius: 1rem;
+
+    /* Pastel Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(152 45% 70%), hsl(207 60% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(152 50% 75%), hsl(152 45% 70%));
+    --gradient-warm: linear-gradient(135deg, hsl(25 75% 75%), hsl(35 70% 78%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 12px hsl(220 15% 25% / 0.06);
+    --shadow-medium: 0 4px 24px hsl(220 15% 25% / 0.08);
+    --shadow-success: 0 4px 20px hsl(152 45% 70% / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
